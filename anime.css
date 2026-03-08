@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+
+.dropping-texts {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  height: 36px;
+  font-weight: bold;
+  font-size: 2rem;
+  vertical-align: -2px;
+}
+
+.dropping-texts>div {
+  font-size: 0px;
+  opacity: 0;
+  margin-left: -30px;
+  position: absolute;
+  font-weight: 300;
+  box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, 0.5);
+}
+
+.dropping-texts>div:nth-child(1) {
+  animation: roll 5s linear infinite 0s;
+}
+
+.dropping-texts>div:nth-child(2) {
+  animation: roll 5s linear infinite 1s;
+}
+
+.dropping-texts>div:nth-child(3) {
+  animation: roll 5s linear infinite 2s;
+}
+
+.dropping-texts>div:nth-child(4) {
+  animation: roll2 5s linear infinite 3s;
+}
+
+@keyframes roll {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  20% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+
+  27% {
+    font-size: 0px;
+    opacity: 0.5;
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(-25deg);
+  }
+
+  3% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  5% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  30% {
+    font-size: inherit;
+    opacity: 1;
+    margin-left: 0px;
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+
+  37% {
+    font-size: 1500px;
+    opacity: 0;
+    margin-left: -1000px;
+    margin-top: -800px;
+  }
+
+  100% {
+    font-size: 0px;
+    opacity: 0;
+    margin-left: -30px;
+    margin-top: 0px;
+    transform: rotate(15deg);
+  }
+}
+
+
+/* Certificate Card   */
+
+
+/* ================= Skills Sliding Effect ================= */
+
+.skills-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.skills-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scrollSkills 10s linear infinite;
+}
+
+@keyframes scrollSkills {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.skills-slider:hover .skills-track {
+  animation-play-state: paused;
+}
+/* ================= Black & White Skill Cards ================= */
+
+.skill-card-bw {     /* Black background */
+  color: #ffffff;           /* White text */
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Hover Effect */
+/* ================= Infinity Logo Slider ================= */
+
+.logo-slider-section {
+
+  background: #111;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+
+/* Slider container */
+.logo-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Fading edges effect */
+.logo-slider::before,
+.logo-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logo-slider::before {
+  left: 0;
+  background: linear-gradient(to right, #111, transparent);
+}
+
+.logo-slider::after {
+  right: 0;
+  background: linear-gradient(to left, #111, transparent);
+}
+
+/* Track */
+.logo-track {
+  display: flex;
+  gap: 80px;
+  width: max-content;
+  animation: scrollLogos 20s linear infinite;
+}
+
+/* Logo style */
+.logo-track img {
+  height: 40px;
+  opacity: 0.6;
+
+  transition: all 0.3s ease;
+}
+
+.logo-track img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Animation */
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause on hover */
+.logo-slider:hover .logo-track {
+  animation-play-state: paused;
+}

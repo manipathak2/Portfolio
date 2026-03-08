@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+/*.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Typing effect */
+
+.typing-container {
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  width: 0ch; /* Start with 0 characters visible */
+  animation: typing 4s steps(30) forwards, blink 0.7s infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 500px; } /* Adjust to the number of characters in your text */
+}
+
+/* Cursor blinking */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
