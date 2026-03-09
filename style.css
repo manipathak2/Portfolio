@@ -33,7 +33,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
+  padding: 10px 10px;
   width: 100%;
   position:fixed;
   top: 0;
@@ -1373,5 +1373,6 @@ footer {
 .featured-border-start {
   border-left: 1px solid #333333;
 }
+
 
 
