@@ -33,7 +33,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 15px;
   width: 100%;
   position:fixed;
   top: 0;
@@ -189,7 +189,7 @@ nav a.active {
 
 /* Container for buttons */
 .hero-buttons {
-  margin-top: 48px;
+  margin-top: 40px;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -1373,4 +1373,5 @@ footer {
 .featured-border-start {
   border-left: 1px solid #333333;
 }
+
 
